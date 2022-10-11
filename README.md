@@ -1,1 +1,1 @@
-# Facial-Expression-Classification-using-Logistic-Regression
+# Facial Expression Classification using Logistic Regression
