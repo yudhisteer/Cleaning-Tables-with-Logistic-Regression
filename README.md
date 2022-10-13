@@ -26,3 +26,6 @@
 ## 1. Linear Classification
 
 ### 1.1 Equation of a linear classifier
+
+## References
+1. https://scipython.com/blog/logistic-regression-for-image-classification/
