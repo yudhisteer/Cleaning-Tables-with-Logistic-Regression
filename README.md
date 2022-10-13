@@ -1,4 +1,4 @@
-# Facial Expression Classification using Logistic Regression
+# Cleaning Tables with Logistic Regression
 
 ## Plan of Action
 
