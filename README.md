@@ -27,5 +27,19 @@
 
 ### 1.1 Equation of a linear classifier
 
+<img width="729" alt="image" src="https://user-images.githubusercontent.com/59663734/195506122-b274ac02-7936-4b4d-bae0-4c619f5df52b.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## References
 1. https://scipython.com/blog/logistic-regression-for-image-classification/
