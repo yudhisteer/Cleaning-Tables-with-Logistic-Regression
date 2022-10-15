@@ -128,7 +128,7 @@ The logistic regression model can be described as closest to how a neuron works.
 
 Let's describe some analogies:
 
-1. It has** many inputs** (in) and **one output** (out) - just like our logistic model who can have many features (x) and one label column (y).
+1. It has **many inputs** (in) and **one output** (out) - just like our logistic model who can have many features (x) and one label column (y).
 2. The output of the neuron is either a spike or no spike: 0/1 output. That is, we have some **excitability threshold** which is the minimal value above which a spike is elicited. Hence, a **binary classifier** just as our logistic model.
 3. The connections among neurons are realized in the synapses (not shown in picture). The **strengths** of these synapses are analogous to the **linear weights** in our logistic regression model.
 4. The output of a neuron is one of the inputs of another neuron which is exactly how we represent a **Neural Network**.
