@@ -135,10 +135,14 @@ Let's describe some analogies:
 
 
 ### 1.3 Output of logistic regression
+So far we have talked only about the **sign** of the output of our logistic regression model and not about the **magnitude** of that value. When plugging in values for a new data point in h(w;x), the output can be any value from ```-inf``` to ```+inf```. What we want to know now is if a new data point is classified as positive then how positive is it? We want our output to have a clear defined ```range``` and a ```threshold```. In order to achieve the later, we need to pass the output of h(w;x) through a ```non-linear``` function called the **sigmoid** function. The two main reasons for using a non-linear sigmoid function are:
+
+1. A non-linear function allows learning of **complex** features.
+2. The output of the sigmoid function which is between ```0``` an ```1``` can be interpreted as **probability**.
 
 
 <p align="center">
-  <img src= "https://user-images.githubusercontent.com/59663734/196009063-4937e268-533d-4ec9-b612-89668f2c9468.png" width="500" height="200"/>
+  <img src= "https://user-images.githubusercontent.com/59663734/196009063-4937e268-533d-4ec9-b612-89668f2c9468.png" width="470" height="180"/>
 </p>
 
 
