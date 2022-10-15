@@ -140,17 +140,52 @@ So far we have talked only about the **sign** of the output of our logistic regr
 1. A non-linear function allows learning of **complex** features.
 2. The output of the sigmoid function which is between ```0``` an ```1``` can be interpreted as **probability**.
 
-
 <p align="center">
   <img src= "https://user-images.githubusercontent.com/59663734/196009063-4937e268-533d-4ec9-b612-89668f2c9468.png" width="470" height="180"/>
 </p>
 
+The sigmoid function is defined as follows:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/196010942-63333281-7bb2-434b-a58d-e8d4f85ff156.png"/>
+</p>
+
+where:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/196010968-97778ab7-dfd7-423b-ab80-dde06ca9981f.png"/>
+</p>
+
+Below we have the graph of the sigmoid function. We notice a few things:
+
+- The output is always between ```0``` and ```1```.
+- The graph never reaches ```0``` or ```1``` but is acually asymptotic.
+- We can set the midpoint, ```0.5```, as a theshold dividing the two classes.
 
 
 
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/196011261-c1ecb8e4-c5a3-4abf-9145-f475a837463d.png" width="500" height="330"/>
+</p>
+
+The outputs can be defined as:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/196011090-e2825765-a09e-472d-acbf-82c0e75d9b53.png" width="290" height="130"/>
+</p>
+
+The output of the logistic regression is a number between ```0``` and ```1``` and we can actually interpret it as a **probability**. That is, we can now quantify how positive is a positive point and how negative is a negative point.
 
 
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/196011203-10a6fa86-150b-4759-804c-0af4e7d75a2e.png" width="330" height="100"/>
+</p>
 
+In summary:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/196011554-4c70462e-26e9-4fb5-baf8-3081392bca3b.png" width="270" height="100"/>
+</p>
 
 
 
