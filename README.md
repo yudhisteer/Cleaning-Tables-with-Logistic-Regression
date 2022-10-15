@@ -107,11 +107,17 @@ In order to classify a new point, we need to check for the **sign** of ```h(w;x)
 We do not really care about the magnitude of the output for now but only the **sign**. Hence, we can describe our linear classifier as a **function** which outputs ```{-1, 0, +1}``` if the the **sign** of ```h(w;x)``` is ```negative```, ```0``` and ```positive``` respectively. 
 
 
+Some clarifications: 
 
         - Why do we need to check the sign and not visually see on which side of the classifier our new data falls into?
           Becasue in our example we had only 2 features which could be represented in a 2-d plane. With more features, it will be impossible to visualize since we live in a 3-d world.
           
         - Where was the "bias" in the first example?
+          The equation of a line can be expressed as: y = mx + c where c is the bias. m is the gradient which allows tilting of the line while c allows translation in the plane. Since the equation of our linear classifier was y = x, the bias term was 0.
+          
+        - How do we know our linear classifier is y = x?
+          We assumed. Later on we will describe the steps that will allow us to optimize the weights and get us the most efficient classifier.
+          
           
 
 
