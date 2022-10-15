@@ -26,7 +26,7 @@
     - Donut Problem
     - XOR Problem
 
-5. Clean Tables Recognition
+5. Clean/Dirty Tables Classification
 
 ----------
 ## 1. Linear Classification
@@ -119,6 +119,43 @@ Some clarifications:
           We assumed. Later on we will describe the steps that will allow us to optimize the weights and get us the most efficient classifier.
           
           
+### 1.2 The Neuron
+The logistic regression model can be described as closest to how a neuron works. I will not dive deep in the function or inner workings of a neuron but just describe some analogies of the neuron and our logistic regression model. Below is an image of the structure of a neuron:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/196008465-dd9ffb64-76a6-4469-96f1-9ce0ef56ef7d.jpg"/>
+</p>
+
+Let's describe some analogies:
+
+1. It has** many inputs** (in) and **one output** (out) - just like our logistic model who can have many features (x) and one label column (y).
+2. The output of the neuron is either a spike or no spike: 0/1 output. That is, we have some **excitability threshold** which is the minimal value above which a spike is elicited. Hence, a **binary classifier** just as our logistic model.
+3. The connections among neurons are realized in the synapses (not shown in picture). The **strengths** of these synapses are analogous to the **linear weights** in our logistic regression model.
+4. The output of a neuron is one of the inputs of another neuron which is exactly how we represent a **Neural Network**.
+
+
+
+
+
+
+
+
+
+### 1.3 Output of logistic regression
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
