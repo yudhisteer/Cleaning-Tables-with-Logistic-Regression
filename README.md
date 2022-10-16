@@ -10,7 +10,7 @@
     - Output of logistic regression
 
 2. Optimal Weights
-    - Bayes Solution
+    - Bayes' Solution
     - Error Function
     - Maximum Likelihood: Bernoulli
     - Closed-Form Solution
@@ -178,7 +178,7 @@ The output of the logistic regression is a number between ```0``` and ```1``` an
 
 
 <p align="center">
-  <img src= "https://user-images.githubusercontent.com/59663734/196011203-10a6fa86-150b-4759-804c-0af4e7d75a2e.png" width="330" height="100"/>
+  <img src= "https://user-images.githubusercontent.com/59663734/196011203-10a6fa86-150b-4759-804c-0af4e7d75a2e.png" width="350" height="100"/>
 </p>
 
 In summary:
@@ -187,12 +187,42 @@ In summary:
   <img src= "https://user-images.githubusercontent.com/59663734/196011554-4c70462e-26e9-4fb5-baf8-3081392bca3b.png" width="270" height="100"/>
 </p>
 
+We can write a pseudo code for our algorithm:
 
+```python
+if P(y=1|x) > P(y=0|x):
+    predict class 1
+else:
+    predict class 0
+```
 
+We can also use the threshold as a deciding factor:
 
+```python
+if P(y=1|x) > 0.5:
+    predict class 1
+else:
+    predict class 0
+```
 
+Ultimately we want the predicted label (<img src="https://latex.codecogs.com/png.image?\dpi{110}\hat{y}" title="https://latex.codecogs.com/png.image?\dpi{110}\hat{y}" />) to be either ```0``` or ```1``` hence, we can use the ```round``` function as follows:
 
+```python
+round(0.2) = 0
+round(0.5) = 1
+round(0.99) = 1 
+```
 
+**Does the output of the logistic function really makes sense?**
+
+1. When a point gets futher and further away from the linear classifier, <img src="https://latex.codecogs.com/svg.image?|w^Tx|" title="https://latex.codecogs.com/svg.image?|w^Tx|" /> gets larger.
+2. As <img src="https://latex.codecogs.com/svg.image?|w^Tx|\to&space;\infty&space;" title="https://latex.codecogs.com/svg.image?|w^Tx|\to \infty " />, <img src="https://latex.codecogs.com/svg.image?\mathbb{P}(y=1|x)\to&space;" title="https://latex.codecogs.com/svg.image?\mathbb{P}(y=1|x)\to " /> ```0``` or ```1```.
+3. Further away, we become more **confident** that a point should be either positive or negative as it is far from the oppositite class.
+4. For <img src="https://latex.codecogs.com/svg.image?\mathbb{P}(y=1|x)&space;=&space;\mathbb{P}(y=0|x)&space;=&space;0.5" title="https://latex.codecogs.com/svg.image?\mathbb{P}(y=1|x) = \mathbb{P}(y=0|x) = 0.5" />, we cannot really be sure if the label should be positive or negative.
+
+## 2. Optimal Weights
+
+### 2.1 Bayes' solution
 
 ## References
 1. https://scipython.com/blog/logistic-regression-for-image-classification/
