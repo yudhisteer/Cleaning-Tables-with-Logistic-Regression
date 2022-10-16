@@ -171,7 +171,7 @@ Below we have the graph of the sigmoid function. We notice a few things:
 The outputs can be defined as:
 
 <p align="center">
-  <img src= "https://user-images.githubusercontent.com/59663734/196011090-e2825765-a09e-472d-acbf-82c0e75d9b53.png" width="290" height="130"/>
+  <img src= "https://user-images.githubusercontent.com/59663734/196011934-5a9f4e5a-96a5-4dba-9889-2e52cc1aef65.png" width="310" height="120"/>
 </p>
 
 The output of the logistic regression is a number between ```0``` and ```1``` and we can actually interpret it as a **probability**. That is, we can now quantify how positive is a positive point and how negative is a negative point.
