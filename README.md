@@ -224,7 +224,60 @@ round(0.99) = 1
 One very important characteristic of the logistic regression is that the model makes the assumption that our data can be **linearly separated** by a **line** or **plane**. That is, it is a linear model with input features ```x``` weighted by weights ```w```. The sigmoid function squashes the output to the range ```(0,1)```. Now, we want to find the weights ```w```.
 
 ### 2.1 Bayes' solution
-The Baye's solution is a special case of the logistic regression where we can find a closed-form solution to the problem. For that we need to assume that our data is Gaussian distributed with equal variance.
+The Baye's solution is a special case of the logistic regression where we can find a **closed-form solution** to the problem. For that we need to assume that our data is **Gaussian distributed** with **equal variance**.
+
+Assumptions:
+
+1. Data is from ```2``` classes and they are both ```Gaussian dsitributed```.
+2. ```Same covariance``` but ```different mean```.
+
+
+We will derive our closed form solution using the two equations below:
+
+- **Multivariate Gaussian PDF**
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197076851-b9885a67-f31d-4342-b77a-269ef18d4790.png"/>
+</p>
+
+- **Baye's Rule**
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197077224-575c2876-fea1-489d-818c-c8ec99eba764.png"/>
+</p>
+
+
+1. Manipulating Baye's Rule:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197077989-8a8f6d0c-027c-4514-8d48-9b4d15d95b58.png"/>
+</p>
+
+
+2. Dividing by ```p(x|y=1).p(y=1)```:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197078423-adb91650-7243-4a4c-8c56-fbb774f28fb6.png"/>
+</p>
+
+3. Recall the sigmoid function:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197078643-bfea563c-7a85-4070-975b-71281688ba97.png"/>
+</p>
+
+4. By comparing the last two equations:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197079545-d9391333-3cdd-4a68-a427-1d39b94a2e29.png"/>
+</p>
+
+5. We manipulate only the LHS and let ```p(y=1) = 1-alpha``` and ```p(y=0) = alpha```:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197079783-6c549547-55ed-4ade-badc-6799b207605c.png"/>
+</p>
+
 
 
 
