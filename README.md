@@ -224,6 +224,14 @@ round(0.99) = 1
 One very important characteristic of the logistic regression is that the model makes the assumption that our data can be **linearly separated** by a **line** or **plane**. That is, it is a linear model with input features ```x``` weighted by weights ```w```. The sigmoid function squashes the output to the range ```(0,1)```. Now, we want to find the weights ```w```.
 
 ### 2.1 Bayes' solution
+The Baye's solution is a special case of the logistic regression where we can find a closed-form solution to the problem. For that we need to assume that our data is Gaussian distributed with equal variance.
+
+
+
+
+
+
+
 
 ## References
 1. https://scipython.com/blog/logistic-regression-for-image-classification/
