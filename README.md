@@ -335,10 +335,11 @@ We cannot use SSE for the Logistic Regression so we need another error function.
 2. Get larger when the more incorrect we are.
 
 #### 2.2.1 Cross Entropy Error Function
+
 The Cross-Entropy function is defined as follows:
 
 <p align="center">
-  <img src= "https://user-images.githubusercontent.com/59663734/197218868-834fb995-d64f-4d75-941b-fcdca87e6569.png"/>
+  <img src= "https://user-images.githubusercontent.com/59663734/197266812-c014b041-eb16-48d9-b7fa-1716478b5318.png"/>
 </p>
 
 Note that the target can either be ```0``` or ```1``` and not both at the same time:
@@ -357,7 +358,7 @@ Let's see if we satisfy the two points above for our new error function:
 The equation above was for finding the error for one datapoint but we want to find the errors for all the datapoints in our dataset, hence:
 
 <p align="center">
-  <img src= "https://user-images.githubusercontent.com/59663734/197222211-faa34a9b-a101-4ddf-9265-495925d2a770.png"/>
+  <img src= "https://user-images.githubusercontent.com/59663734/197266713-c52e707e-a0bd-4249-9586-8af089961cc8.png"/>
 </p>
 
 
@@ -387,7 +388,7 @@ In our case we want to find how likely we are to observe a certain set of input 
 We now want the Log Likelihood:
 
 <p align="center">
-  <img src= "https://user-images.githubusercontent.com/59663734/197226301-dd6f7310-81bb-47c8-921e-44d4987a55d4.png"/>
+  <img src= "https://user-images.githubusercontent.com/59663734/197266659-78cadfdf-741b-4eb7-9ede-35f43fb5fdea.png"/>
 </p>
 
 To conclude: 
