@@ -223,7 +223,7 @@ round(0.99) = 1
 ## 2. Optimal Weights
 One very important characteristic of the logistic regression is that the model makes the assumption that our data can be **linearly separated** by a **line** or **plane**. That is, it is a linear model with input features ```x``` weighted by weights ```w```. The sigmoid function squashes the output to the range ```(0,1)```. Now, we want to find the weights ```w```.
 
-### 2.1 Bayes' solution
+### 2.1 Bayes' Solution
 The Baye's solution is a special case of the logistic regression where we can find a **closed-form solution** to the problem. For that we need to assume that our data is **Gaussian distributed** with **equal variance**.
 
 Assumptions:
@@ -308,6 +308,14 @@ We will derive our closed form solution using the two equations below:
 </p>
 
 > Note: We can only use this closed-form solution if our data is Gaussian distributed with equal variance which is mostly never in real-life scenarios.
+
+### 2.2 Error Function
+
+
+
+
+
+
 
 
 ## References
