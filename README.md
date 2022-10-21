@@ -379,7 +379,7 @@ The likelihood function is defined as:
   <img src= "https://user-images.githubusercontent.com/59663734/197225134-696f12e0-1e64-428b-8fea-9dddf2e4b31b.png"/>
 </p>
 
-In our case we want to find how likely we are to observe a certain set of input ```X``` (distribution) and targets ```y_hat``` when given parameter ```w```:
+In our case we want to find how likely we are to observe a certain set of input ```X``` (distribution) and targets ```y``` when given parameter ```w```:
 
 <p align="center">
   <img src= "https://user-images.githubusercontent.com/59663734/197267528-2a80accc-45d6-4468-b4e5-1e3092a421a9.png"/>
