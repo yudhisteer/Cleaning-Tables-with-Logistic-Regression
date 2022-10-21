@@ -361,7 +361,7 @@ The equation above was for finding the error for one datapoint but we want to fi
 </p>
 
 
-
+### 2.3 Maximum Likelihood: Bernoulli
 
 
 
