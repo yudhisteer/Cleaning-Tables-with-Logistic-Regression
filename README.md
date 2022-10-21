@@ -398,12 +398,27 @@ To conclude:
 
 
 ### 2.4 Closed-Form Solution
+In order to find the closed-form solution we need to find the derivation of the cross-entropy function and set it to ```0```. We start by finding the derivative:
 
+Recall from earlier the formula for the sigmoid function:
 
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197268174-57c1c765-7096-4ed3-b2c5-f885ea52857d.png"/>
+</p>
 
+We replace ```y_hat``` in the cross-entropy function and transform our cost function in vector form:
 
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197268520-7ab05526-3dbb-4116-8b3c-ff2cee51ef85.png"/>
+</p>
 
+We need to maximize the equation above. Now we differentiate w.r.t w:
 
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197268964-016c484b-2aee-4d7d-8793-c8f5b10916e7.png"/>
+</p>
+
+We **CANNOT** set the equation above to ```0``` and solve for ```w```! Hence, we do **NOT** have a closed-form function for Logistic Regression using the Cross-Entropy function.
 
 
 
