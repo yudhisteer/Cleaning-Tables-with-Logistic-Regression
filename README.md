@@ -278,12 +278,36 @@ We will derive our closed form solution using the two equations below:
   <img src= "https://user-images.githubusercontent.com/59663734/197079783-6c549547-55ed-4ade-badc-6799b207605c.png"/>
 </p>
 
+6. We now replace equation (1) in the above equation:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197080522-33434c99-f4ac-4c29-a144-708fb31437fb.png"/>
+</p>
 
 
+7. After some manipulation and using the fact that the **covariance** is ```symmetric``` and ```positive semdefinite```:
 
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197080802-4293797f-c81b-480c-bd64-4b7b6dda6f17.png"/>
+</p>
 
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197081159-4bed9c43-869c-45cd-b24f-23fb179f46c2.png"/>
+</p>
 
+8. Recall from earlier:
 
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197079545-d9391333-3cdd-4a68-a427-1d39b94a2e29.png"/>
+</p>
+
+9. Therefore, our **weights** and **bias**:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197081433-e34f7a17-778f-4952-8ee5-b9ea7d71d417.png"/>
+</p>
+
+> Note: We can only use this closed-form solution if our data is Gaussian distributed with equal variance which is mostly never in real-life scenarios.
 
 
 ## References
