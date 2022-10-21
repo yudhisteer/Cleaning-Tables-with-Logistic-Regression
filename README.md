@@ -399,5 +399,20 @@ To conclude:
 ### 2.4 Closed-Form Solution
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## References
 1. https://scipython.com/blog/logistic-regression-for-image-classification/
