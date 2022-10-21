@@ -357,7 +357,7 @@ Let's see if we satisfy the two points above for our new error function:
 The equation above was for finding the error for one datapoint but we want to find the errors for all the datapoints in our dataset, hence:
 
 <p align="center">
-  <img src= "https://user-images.githubusercontent.com/59663734/197222211-faa34a9b-a101-4ddf-9265-495925d2a770.png" width="400" height="200"/>
+  <img src= "https://user-images.githubusercontent.com/59663734/197222211-faa34a9b-a101-4ddf-9265-495925d2a770.png"/>
 </p>
 
 
