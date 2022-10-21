@@ -345,7 +345,7 @@ The Cross-Entropy function is defined as follows:
 Note that the target can either be ```0``` or ```1``` and not both at the same time:
 
 <p align="center">
-  <img src= "https://user-images.githubusercontent.com/59663734/197219544-b53f30ed-3e03-4772-a21d-c16db2e1db8a.png"/>
+  <img src= "https://user-images.githubusercontent.com/59663734/197267180-ed8d28e2-968d-44ca-a8ed-74d6ee5e6ab7.png"/>
 </p>
 
 
@@ -382,7 +382,7 @@ The likelihood function is defined as:
 In our case we want to find how likely we are to observe a certain set of input ```X``` (distribution) and targets ```y_hat``` when given parameter ```w```:
 
 <p align="center">
-  <img src= "https://user-images.githubusercontent.com/59663734/197227105-0c299461-8695-48b6-9a76-d472a2ba8f82.png"/>
+  <img src= "https://user-images.githubusercontent.com/59663734/197267528-2a80accc-45d6-4468-b4e5-1e3092a421a9.png"/>
 </p>
 
 We now want the Log Likelihood:
