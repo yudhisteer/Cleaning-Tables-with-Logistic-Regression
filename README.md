@@ -362,12 +362,41 @@ The equation above was for finding the error for one datapoint but we want to fi
 
 
 ### 2.3 Maximum Likelihood: Bernoulli
+We can also arrive at the same equation using the Maximum Likelihood Estimation for a Bernoulli Distribution. Note that we use Bernoulli because our targets and label are either 0 or 1 only.
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197224540-2550007a-ec8b-41f9-95f9-05a2531b437f.png"/>
+</p>
+
+The likelihood function is defined as:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197225224-c797740b-3be3-4c8b-85e8-eb6b47cc7953.png"/>
+</p>
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197225134-696f12e0-1e64-428b-8fea-9dddf2e4b31b.png"/>
+</p>
+
+In our case we want to find how likely we are to observe a certain set of input ```X``` (distribution) and targets ```y_hat``` when given parameter ```w```:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197227105-0c299461-8695-48b6-9a76-d472a2ba8f82.png"/>
+</p>
+
+We now want the Log Likelihood:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197226301-dd6f7310-81bb-47c8-921e-44d4987a55d4.png"/>
+</p>
+
+To conclude: 
+
+> Maximixing Log-Likelihood = Minimizing Cross-Entropy Error
 
 
 
-
-
-
+### 2.4 Closed-Form Solution
 
 
 ## References
