@@ -311,6 +311,58 @@ We will derive our closed form solution using the two equations below:
 
 ### 2.2 Error Function
 
+#### 2.2.1 Sum of Squares Error(SSE)
+So we cannot use the Bayes' solution except under certain assumptions hence, our next best approach will be to find a closed-form solution from an Error function similar to the Linear Regression. Recall our cost function with linear regression were as follows:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197217301-82e46e1d-1e60-4cfe-b8e6-9bdd9add669f.png"/>
+</p>
+
+We can solve this to find a closed-form solution:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197217520-b63739b1-41fa-4eba-870c-c7f5f5bdb5d7.png"/>
+</p>
+
+Note:
+
+- We used the Sum of Squares Error(SSE) because we assumed our residuals are Gaussian dsitributed.
+- However, the logistic error CANNOT be Gaussian dsitributed as the output and target can only be 0 or 1.
+
+We cannot use SSE for the Logistic Regression so we need another error function. In summary, we want our error function to be:
+
+1. ```0``` when we have no error
+2. Get larger when the more incorrect we are.
+
+#### 2.2.1 Cross Entropy Error Function
+The Cross-Entropy function is defined as follows:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197218868-834fb995-d64f-4d75-941b-fcdca87e6569.png"/>
+</p>
+
+Note that the target can either be ```0``` or ```1``` and not both at the same time:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197219544-b53f30ed-3e03-4772-a21d-c16db2e1db8a.png"/>
+</p>
+
+
+Let's see if we satisfy the two points above for our new error function:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197221465-60db9386-726c-426d-b566-a6a6291c7135.png" width="400" height="200"/>
+</p>
+
+The equation above was for finding the error for one datapoint but we want to find the errors for all the datapoints in our dataset, hence:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197222211-faa34a9b-a101-4ddf-9265-495925d2a770.png" width="400" height="200"/>
+</p>
+
+
+
+
 
 
 
