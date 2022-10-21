@@ -304,7 +304,7 @@ We will derive our closed form solution using the two equations below:
 9. Therefore, our **weights** and **bias**:
 
 <p align="center">
-  <img src= "https://user-images.githubusercontent.com/59663734/197081433-e34f7a17-778f-4952-8ee5-b9ea7d71d417.png"/>
+  <img src= "https://user-images.githubusercontent.com/59663734/197081892-da6466d4-21aa-415a-a0ce-0c973b2a4120.png"/>
 </p>
 
 > Note: We can only use this closed-form solution if our data is Gaussian distributed with equal variance which is mostly never in real-life scenarios.
