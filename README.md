@@ -385,7 +385,7 @@ Note that we have also mapped the probability of our predictions to color.
   <img src= "https://user-images.githubusercontent.com/59663734/197355986-11cb2bad-198a-4cb6-ad74-44bc578b4934.png"/>
 </p>
 
-This shows that data points that are far from the decision boundary has higher probabilites of coming from a certain class, thus we are more certain they are correctly predicted. Data points that are close to the decision boundary have less probabilites hence, have higher chances of wrong predictions.
+This shows that data points that are far from the decision boundary has probabilities close to ```0``` or ```1```. This shows that we are more certain that they have correctly been predicted. Data points that are close to the decision boundary have probabilites close to ```0.5``` hence, they may be either from the positive or negative class.
 
 ### 2.2 Error Function
 
