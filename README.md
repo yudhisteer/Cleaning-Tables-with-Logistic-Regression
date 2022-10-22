@@ -440,6 +440,18 @@ The equation above was for finding the error for one datapoint but we want to fi
   <img src= "https://user-images.githubusercontent.com/59663734/197266713-c52e707e-a0bd-4249-9586-8af089961cc8.png"/>
 </p>
 
+```python
+# calculate the cross-entropy error
+def cross_entropy(Y, Y_hat):
+    E = 0
+    for i in range(len(Y)):
+        if Y[i] == 1:
+            E -= np.log(Y_hat[i])
+        else:
+            E -= np.log(1 - Y_hat[i])
+    return E
+```
+
 
 ### 2.3 Maximum Likelihood: Bernoulli
 We can also arrive at the same equation using the Maximum Likelihood Estimation for a Bernoulli Distribution. Note that we use Bernoulli because our targets and label are either 0 or 1 only.
