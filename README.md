@@ -421,9 +421,13 @@ We need to maximize the equation above. Now we differentiate w.r.t w:
 We **CANNOT** set the equation above to ```0``` and solve for ```w```! Hence, we do **NOT** have a closed-form function for Logistic Regression using the Cross-Entropy function.
 
 
+### 2.5 Gradient Descent
+If we cannot solve using a closed-form solution then we need another optimization algorithm: **Gradient Descent**.
 
 
-
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197270401-daf4ca6e-79b3-415f-b9d1-fbefcd04661a.png" width="500" height="400"/>
+</p>
 
 
 
