@@ -156,6 +156,11 @@ where:
   <img src= "https://user-images.githubusercontent.com/59663734/196010968-97778ab7-dfd7-423b-ab80-dde06ca9981f.png"/>
 </p>
 
+```python
+def sigmoid(z):
+    return 1/(1 + np.exp(-z))
+```
+
 Below we have the graph of the sigmoid function. We notice a few things:
 
 - The output is always between ```0``` and ```1```.
@@ -308,6 +313,65 @@ We will derive our closed form solution using the two equations below:
 </p>
 
 > Note: We can only use this closed-form solution if our data is Gaussian distributed with equal variance which is mostly never in real-life scenarios.
+
+Let us walk through an example. In order to use Bayes' rule we need data to have ediffereent mean but same covariance:
+
+```python
+mean1 = [0, 4]
+cov1 = [[2.5, 0], [0, 2.5]]  # diagonal covariance
+
+mean2 = [6, 0]
+cov2 = [[2.5, 0], [0, 2.5]]  # diagonal covariance
+```
+
+Note that it is difficult to have data which is Gaussian distributed with same covariance in real life we need to fabricate this data as shown below:
+
+```python
+# X_mat is the design matrix
+# first 1000 observations are from one distribution, the second 1000 observations are from another distribution
+
+x1, y1 = np.random.multivariate_normal(mean1, cov1, 1000).T
+x2, y2 = np.random.multivariate_normal(mean2, cov2, 1000).T
+
+x = np.array([x1,x2]).flatten()
+y = np.array([y1,y2]).flatten()
+
+X_mat = np.stack([np.ones(2000),x,y],axis=1) #shape = (2000, 3)
+```
+We now write Bayes' closed-form solution:
+
+```python
+weights = np.dot(np.array(mean2).T - np.array(mean1).T,np.linalg.inv(cov1)) # cov1 = cov2
+```
+From the weights we now calculate the predictions:
+
+```python
+# weights from solution
+w = [0, w1, w2]
+
+# predicted probabilities from the sigmoid function
+z = X_mat.dot(w)
+
+predictions = 1/(1 + np.exp(-z))
+
+# actual classes (0 for Negative, 1 for Positive)
+actuals = [0]*1000+[1]*1000
+```
+
+Our dataframe is as follows:
+
+```python
+
+       bias	x1	          x2	        prediction	actual
+0	1.0	2.553723	1.281897	0.267096	0
+1	1.0	1.546036	4.878440	0.999902	0
+2	1.0	-1.950017	3.617210	0.999993	0
+3	1.0	-2.540598	5.422829	1.000000	0
+4	1.0	0.511690	2.190639	0.988328	0
+```
+
+
+
 
 ### 2.2 Error Function
 
@@ -490,6 +554,7 @@ In summary:
 
 
 
+![download](https://user-images.githubusercontent.com/59663734/197355168-3ddb2e59-0cc0-4a1e-b2ec-52d8387c108e.png)
 
 
 
