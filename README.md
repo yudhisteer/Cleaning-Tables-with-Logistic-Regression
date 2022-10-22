@@ -569,6 +569,22 @@ Hence the equation for the gradient descent becomes:
   <img src= "https://user-images.githubusercontent.com/59663734/197353961-23c4103b-2317-4622-b478-aad591387f25.png"/>
 </p>
 
+```python
+# randomly initialize the weights
+w = np.random.randn(D + 1)
+
+learning_rate = 0.1
+for i in range(100):
+    if i % 10 == 0:
+        print("Error = ", cross_entropy(Y, Y_hat))
+
+    # gradient descent weight udpate
+    w += - learning_rate * Xb.T.dot(Y_hat-Y)
+
+    # recalculate Y_hat
+    Y_hat = sigmoid(Xb.dot(w))
+```
+
 In summary:
 
 1. If we assume our data is Gaussian distributed with equal covariance then we can use the **Bayes' closed-form solution**.
