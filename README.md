@@ -433,7 +433,7 @@ while not converged:
 An image showing the same below:
 
 <p align="center">
-  <img src= "https://user-images.githubusercontent.com/59663734/197270401-daf4ca6e-79b3-415f-b9d1-fbefcd04661a.png" width="500" height="400"/>
+  <img src= "https://user-images.githubusercontent.com/59663734/197270401-daf4ca6e-79b3-415f-b9d1-fbefcd04661a.png" width="500" height="380"/>
 </p>
 
 We start by iterating our objective function:
@@ -477,6 +477,22 @@ Hence the equation for the gradient descent becomes:
 <p align="center">
   <img src= "https://user-images.githubusercontent.com/59663734/197353961-23c4103b-2317-4622-b478-aad591387f25.png"/>
 </p>
+
+In summary:
+
+1. If we assume our data is Gaussian distributed with equal covariance then we can use the **Bayes' closed-form solution**.
+2. However, Gaussian assumtion may not be true so we **maximize** our **log-likelihhod** OR **minimize** the **Cross-Entropy** function. But there is NO closed-form solution.
+3. We thus use a more general optimization method: **Gradient Descent**.
+
+
+## 3. Regularization
+
+
+
+
+
+
+
 
 
 
