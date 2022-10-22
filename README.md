@@ -374,9 +374,10 @@ We then plot the decision boundary with the scatter plot:
 ```python
 ax = sns.scatterplot('x1','x2',data = results_df,hue = 'prediction',palette='RdBu') # data points
 
-#equation of line: w1x1 + w2x2 + c = 0
-# x2 = -w1x1/x2 where c = 0
-plt.plot(np.linspace(-5,10,10),(-w1*np.linspace(-5,10,10)/w2),linestyle='--',color='k',alpha=0.25) # decision boundary
+#equation of line: w1x1+w2x2 + w0x0 = 0 #x0 =1
+# x2 = -w1x1/x2 where w0 = 0
+plt.plot(np.linspace(-5,10,10),(-w1*np.linspace(-5,10,10)/w2 - 0),linestyle='--',color='k',alpha=0.25) # decision boundary
+
 ```
 
 Note that we have also mapped the probability of our predictions to color. 
