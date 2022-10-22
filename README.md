@@ -422,12 +422,62 @@ We **CANNOT** set the equation above to ```0``` and solve for ```w```! Hence, we
 
 
 ### 2.5 Gradient Descent
-If we cannot solve using a closed-form solution then we need another optimization algorithm: **Gradient Descent**.
+If we cannot solve using a closed-form solution then we need another optimization algorithm: **Gradient Descent**. We start with some initial values for the weights then we want to reach the global minima of our error function curve where the error is minimum and the weights are optimal. 
 
+```python
+w --> some ranfom initial values
+while not converged:
+    w ---> w - η.dJ/dW // η = learning rate
+```
+
+An image showing the same below:
 
 <p align="center">
   <img src= "https://user-images.githubusercontent.com/59663734/197270401-daf4ca6e-79b3-415f-b9d1-fbefcd04661a.png" width="500" height="400"/>
 </p>
+
+We start by iterating our objective function:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197353229-c4b98395-6324-412e-b0d8-5fda8628aa78.png"/>
+</p>
+
+We need to use chain rule to find ```dJ/dw```:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197353380-94aca4e2-4919-4702-b506-37d0920dc934.png"/>
+</p>
+
+1. First component:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197353504-55beb0df-65e6-4923-a78e-0b33a357b904.png"/>
+</p>
+
+2. Second component:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197353694-b9c0ac3b-4487-426b-89b8-63f6cc3a9ac5.png"/>
+</p>
+
+3. Third component:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197353768-262251f9-8575-4aab-832f-bcd6b2e88021.png"/>
+</p>
+
+Putting all together and formatting in vector form:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197353867-13fc9790-3a00-4650-8d86-7f4dc9aa011f.png"/>
+</p>
+
+Hence the equation for the gradient descent becomes:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197353961-23c4103b-2317-4622-b478-aad591387f25.png"/>
+</p>
+
 
 
 
