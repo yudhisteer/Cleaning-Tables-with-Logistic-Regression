@@ -369,9 +369,23 @@ Our dataframe is as follows:
 3	1.0	-2.540598	5.422829	1.000000	0
 4	1.0	0.511690	2.190639	0.988328	0
 ```
+We then plot the decision boundary with the scatter plot:
 
+```python
+ax = sns.scatterplot('x1','x2',data = results_df,hue = 'prediction',palette='RdBu') # data points
 
+#equation of line: w1x1 + w2x2 + c = 0
+# x2 = -w1x1/x2 where c = 0
+plt.plot(np.linspace(-5,10,10),(-w1*np.linspace(-5,10,10)/w2),linestyle='--',color='k',alpha=0.25) # decision boundary
+```
 
+Note that we have also mapped the probability of our predictions to color. 
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197355986-11cb2bad-198a-4cb6-ad74-44bc578b4934.png"/>
+</p>
+
+This shows that data points that are far from the decision boundary has higher probabilites of coming from a certain class, thus we are more certain they are correctly predicted. Data points that are close to the decision boundary have less probabilites hence, have higher chances of wrong predictions.
 
 ### 2.2 Error Function
 
@@ -550,14 +564,6 @@ In summary:
 
 
 ## 3. Regularization
-
-
-
-
-![download](https://user-images.githubusercontent.com/59663734/197355168-3ddb2e59-0cc0-4a1e-b2ec-52d8387c108e.png)
-
-
-
 
 
 
