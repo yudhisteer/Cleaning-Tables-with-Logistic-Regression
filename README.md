@@ -585,6 +585,14 @@ for i in range(100):
     Y_hat = sigmoid(Xb.dot(w))
 ```
 
+We will now see an example whereby we compare the weights of the **Bayes' solution** to the **Gradient Descent** ones. Which one would think would converge better?
+
+
+
+
+
+
+
 In summary:
 
 1. If we assume our data is Gaussian distributed with equal covariance then we can use the **Bayes' closed-form solution**.
