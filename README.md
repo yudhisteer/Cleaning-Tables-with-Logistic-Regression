@@ -634,7 +634,7 @@ In summary:
 - However, Gaussian assumtion may not be true so we **maximize** our **log-likelihhod** OR **minimize** the **Cross-Entropy** function. But there is **NO** closed-form solution.
 - We thus use a more general optimization method: **Gradient Descent**.
 
-=================
+-----------------
 
 ## 3. Regularization
 
