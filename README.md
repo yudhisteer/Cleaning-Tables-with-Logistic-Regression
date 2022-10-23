@@ -622,13 +622,7 @@ print(T)
   <img src= "https://user-images.githubusercontent.com/59663734/197396985-aed8b250-fd43-4992-ab08-35a405e1ffbe.png" width="600" height="360"/>
 </p>
 
-Conclusion: We applied the Bayes' solution on datapoints which is **NOT** Gaussian distributed with equal covariance. Hence, it did not give us the best solution. While the gradient descent which does not depend on such assumptions gave us the most optimal weights with the least Cross-Entropy error.
-
-
-
-
-
-
+**Conclusion**: We applied the Bayes' solution on datapoints which is **NOT** Gaussian distributed with equal covariance. Hence, it did not give us the best solution. While the gradient descent which does not depend on such assumptions gave us the most optimal weights with the least Cross-Entropy error.
 
 In summary:
 
