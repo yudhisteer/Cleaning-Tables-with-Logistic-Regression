@@ -225,6 +225,8 @@ round(0.99) = 1
 3. Further away, we become more **confident** that a point should be either positive or negative as it is far from the oppositite class.
 4. For <img src="https://latex.codecogs.com/svg.image?\mathbb{P}(y=1|x)&space;=&space;\mathbb{P}(y=0|x)&space;=&space;0.5" title="https://latex.codecogs.com/svg.image?\mathbb{P}(y=1|x) = \mathbb{P}(y=0|x) = 0.5" />, we cannot really be sure if the label should be positive or negative.
 
+----------
+
 ## 2. Optimal Weights
 One very important characteristic of the logistic regression is that the model makes the assumption that our data can be **linearly separated** by a **line** or **plane**. That is, it is a linear model with input features ```x``` weighted by weights ```w```. The sigmoid function squashes the output to the range ```(0,1)```. Now, we want to find the weights ```w```.
 
@@ -632,6 +634,7 @@ In summary:
 - However, Gaussian assumtion may not be true so we **maximize** our **log-likelihhod** OR **minimize** the **Cross-Entropy** function. But there is **NO** closed-form solution.
 - We thus use a more general optimization method: **Gradient Descent**.
 
+=================
 
 ## 3. Regularization
 
