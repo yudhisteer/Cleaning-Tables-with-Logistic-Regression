@@ -610,13 +610,13 @@ print(T)
   <img src= "https://user-images.githubusercontent.com/59663734/197396871-c9dfe852-e4d3-415b-a596-0914935328ad.png" width="600" height="360"/>
 </p>
 
-3. We try to optimize the weights with the Bayes' solution:
+3. We try to optimize the weights with the **Bayes' solution**:
 
 <p align="center">
   <img src= "https://user-images.githubusercontent.com/59663734/197396934-3c6ee048-40db-47d4-a9f8-b16d2923ca77.png" width="600" height="360"/>
 </p>
 
-4. Observe that the Bayes' solution does pretty well excepts for this one point which is exactly on the deision boundary. Let's try with the gradient descent:
+4. Observe that the Bayes' solution does pretty well excepts for this one point which is exactly on the deision boundary. Let's try with the **gradient descent**:
 
 <p align="center">
   <img src= "https://user-images.githubusercontent.com/59663734/197396985-aed8b250-fd43-4992-ab08-35a405e1ffbe.png" width="600" height="360"/>
