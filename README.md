@@ -593,6 +593,8 @@ We will now see an example whereby we compare the weights of the **Bayes' soluti
 N = 100
 D = 2
 
+X = np.random.randn(N,D)
+
 # center the first 50 points at (-2,-2)
 X[:50,:] = X[:50,:] - 2*np.ones((50,D))
 
@@ -616,7 +618,7 @@ print(T)
   <img src= "https://user-images.githubusercontent.com/59663734/197396934-3c6ee048-40db-47d4-a9f8-b16d2923ca77.png" width="600" height="360"/>
 </p>
 
-4. Observe that the Bayes' solution does pretty well excepts for this one point which is exactly on the deision boundary. Let's try with the **gradient descent**:
+4. Observe that the Bayes' solution does pretty well excepts for this one point which is exactly on the decision boundary. Let's try with the **gradient descent**:
 
 <p align="center">
   <img src= "https://user-images.githubusercontent.com/59663734/197396985-aed8b250-fd43-4992-ab08-35a405e1ffbe.png" width="600" height="360"/>
@@ -627,7 +629,7 @@ print(T)
 In summary:
 
 - If we assume our data is Gaussian distributed with equal covariance then we can use the **Bayes' closed-form solution**.
-- However, Gaussian assumtion may not be true so we **maximize** our **log-likelihhod** OR **minimize** the **Cross-Entropy** function. But there is NO closed-form solution.
+- However, Gaussian assumtion may not be true so we **maximize** our **log-likelihhod** OR **minimize** the **Cross-Entropy** function. But there is **NO** closed-form solution.
 - We thus use a more general optimization method: **Gradient Descent**.
 
 
