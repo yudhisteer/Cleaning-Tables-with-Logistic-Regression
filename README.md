@@ -587,6 +587,43 @@ for i in range(100):
 
 We will now see an example whereby we compare the weights of the **Bayes' solution** to the **Gradient Descent** ones. Which one would think would converge better?
 
+1. We start by creating two cluster of 100 random data points.
+
+```python
+N = 100
+D = 2
+
+# center the first 50 points at (-2,-2)
+X[:50,:] = X[:50,:] - 2*np.ones((50,D))
+
+# center the last 50 points at (2, 2)
+X[50:,:] = X[50:,:] + 2*np.ones((50,D))
+
+# labels: first 50 are 0, last 50 are 1
+T = np.array([0]*50 + [1]*50)
+print(T)
+```
+
+2. We then randomly initialize the weights and plot the decision boundary with the same. Clearly this is a bad classifier.
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197396871-c9dfe852-e4d3-415b-a596-0914935328ad.png" width="600" height="360"/>
+</p>
+
+3. We try to optimize the weights with the Bayes' solution:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197396934-3c6ee048-40db-47d4-a9f8-b16d2923ca77.png" width="600" height="360"/>
+</p>
+
+4. Observe that the Bayes' solution does pretty well excepts for this one point which is exactly on the deision boundary. Let's try with the gradient descent:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/197396985-aed8b250-fd43-4992-ab08-35a405e1ffbe.png" width="600" height="360"/>
+</p>
+
+Conclusion: We applied the Bayes' solution on datapoints which is **NOT** Gaussian distributed with equal covariance. Hence, it did not give us the best solution. While the gradient descent which does not depend on such assumptions gave us the most optimal weights with the least Cross-Entropy error.
+
 
 
 
@@ -595,9 +632,9 @@ We will now see an example whereby we compare the weights of the **Bayes' soluti
 
 In summary:
 
-1. If we assume our data is Gaussian distributed with equal covariance then we can use the **Bayes' closed-form solution**.
-2. However, Gaussian assumtion may not be true so we **maximize** our **log-likelihhod** OR **minimize** the **Cross-Entropy** function. But there is NO closed-form solution.
-3. We thus use a more general optimization method: **Gradient Descent**.
+- If we assume our data is Gaussian distributed with equal covariance then we can use the **Bayes' closed-form solution**.
+- However, Gaussian assumtion may not be true so we **maximize** our **log-likelihhod** OR **minimize** the **Cross-Entropy** function. But there is NO closed-form solution.
+- We thus use a more general optimization method: **Gradient Descent**.
 
 
 ## 3. Regularization
