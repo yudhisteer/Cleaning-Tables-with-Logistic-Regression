@@ -518,7 +518,7 @@ We **CANNOT** set the equation above to ```0``` and solve for ```w```! Hence, we
 If we cannot solve using a closed-form solution then we need another optimization algorithm: **Gradient Descent**. We start with some initial values for the weights then we want to reach the global minima of our error function curve where the error is minimum and the weights are optimal. 
 
 ```python
-w --> some ranfom initial values
+w --> some random initial values
 while not converged:
     w ---> w - η.dJ/dW // η = learning rate
 ```
@@ -626,7 +626,7 @@ print(T)
   <img src= "https://user-images.githubusercontent.com/59663734/197396985-aed8b250-fd43-4992-ab08-35a405e1ffbe.png" width="600" height="360"/>
 </p>
 
-**Conclusion**: We applied the Bayes' solution on datapoints which is **NOT** Gaussian distributed with equal covariance. Hence, it did not give us the best solution. While the gradient descent which does not depend on such assumptions gave us the most optimal weights with the least Cross-Entropy error.
+**Conclusion**: We applied the Bayes' solution on datapoints which are **NOT** Gaussian distributed with equal covariance. Hence, it did not give us the best solution. While the gradient descent, which does not depend on such assumptions, gave us the most optimal weights with the least Cross-Entropy error.
 
 In summary:
 
