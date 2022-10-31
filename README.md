@@ -638,14 +638,18 @@ In summary:
 
 ## 3. Regularization
 
-In Linear Regression, the weight w_i is the amount y will increase if x_i is increased by ```1``` and all remaining x_s remains constant. In Logistic Regression, the output prediction will be either ```0``` or ```1```. So the weight will bring the prediction closer to ```1``` or ```0```. 
+In Linear Regression, the weight ```w_i``` is the amount y will increase if ```x_i``` is increased by ```1``` and all remaining ```x_s``` remains constant. In Logistic Regression, the output prediction will be either ```0``` or ```1```. So the weight will bring the prediction closer to ```1``` or ```0```. 
 
-- If w_i is big and positive, then a small increase in x_i will push the output closer to ```1```.
-- If w_i is big and negative, then a small increase in x_i will push the output closer to ```0```.
+- If ```w_i``` is **big** and **positive**, then a **small increase** in ```x_i``` will push the output closer to ```1```.
+- If ```w_i``` is **big** and **negative**, then a **small increase** in ```x_i``` will push the output closer to ```0```.
 
 In summary, ```bigger weights = bigger effects.```
 
 ### 3.1 L2: Ridge Regularization
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/198926338-5df373c3-e183-458c-998e-9cfe8953ae9d.png" width="500" height="350"/>
+</p>
 
 
 
