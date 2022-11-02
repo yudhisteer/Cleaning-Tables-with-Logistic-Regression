@@ -661,8 +661,15 @@ But why is the Bayesian solution ```[0 4 4]``` and not ```[0 1 1]``` or ```[0 10
   <img src= "https://user-images.githubusercontent.com/59663734/199395724-11c710ff-2e70-49db-b49b-e8e9c9b8d7dd.png" width="270" height="250"/>
 </p>
 
-We observe that our best weights should actually have been ```[0 +inf +inf]``` where the weights would have been ```0``` but unfortunately the computer cannot calculate. With suchlarge weights, our model will overfit the data. 
+We observe that our best weights should actually have been ```[0 +inf +inf]``` where the weights would have been ```0``` but unfortunately the computer cannot calculate. With suchlarge weights, our model will **overfit** the data. The model overfits when it has to _"guess"_ what the output should be in an unknown space. 
 
+Hence, we need **regularization** which will **penalize** those **large weights**:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/199397651-3d27e517-ae96-4c40-8edc-75601706c06a.png"/>
+</p>
+
+where <img src="https://latex.codecogs.com/png.image?\dpi{110}\lambda&space;" title="https://latex.codecogs.com/png.image?\dpi{110}\lambda " /> is the **smoothing parameter**.
 
 
 
