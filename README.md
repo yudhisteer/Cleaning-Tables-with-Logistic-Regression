@@ -646,10 +646,34 @@ In Linear Regression, the weight ```w_i``` is the amount y will increase if ```x
 In summary, ```bigger weights = bigger effects.```
 
 ### 3.1 L2: Ridge Regularization
+Suppose we have two sets of gaussian distributed data with equal covariances. We find out that the optimal weight using the Bayesian solution is ```[0 4 4]```. Recall that the equation of a decision boundary is <img src="https://latex.codecogs.com/svg.image?W^TX&space;=&space;0" title="https://latex.codecogs.com/svg.image?W^TX = 0" />. When we plug in the weights, the equation of our decision boundary is <img src="https://latex.codecogs.com/svg.image?x_2&space;=&space;-x_1" title="https://latex.codecogs.com/svg.image?x_2 = -x_1" /> as shown below.
+
 
 <p align="center">
   <img src= "https://user-images.githubusercontent.com/59663734/198926338-5df373c3-e183-458c-998e-9cfe8953ae9d.png" width="500" height="350"/>
 </p>
+
+
+But why is the Bayesian solution ```[0 4 4]``` and not ```[0 1 1]``` or ```[0 10 10]```? To answer this question, let's calculated the predicted values for various weights and one test point ```[0 1 1]``` and their cross-entropy loss:
+
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/199395724-11c710ff-2e70-49db-b49b-e8e9c9b8d7dd.png" width="270" height="250"/>
+</p>
+
+We observe that our best weights should actually have been ```[0 +inf +inf]``` where the weights would have been ```0``` but unfortunately the computer cannot calculate. With suchlarge weights, our model will overfit the data. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
