@@ -688,19 +688,44 @@ The **Gradient Descent** then becomes:
 </p>
 
 
+Let's examine this through a probabilistic perspective:
 
+Cross-entropy maximizes the likelihood since:
 
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/199527883-e94141ab-0888-4714-b0ba-10c19860f70c.png"/>
+</p>
 
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/199523719-df9cb7d4-6e1a-4133-acf5-0bf867d5a3b2.png"/>
+</p>
 
+We want to maximize J:
 
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/199528801-30fbd921-8588-448f-84c2-bc76314bb606.png"/>
+</p>
 
+When applying exponential:
 
-![CodeCogsEqn (82)](https://user-images.githubusercontent.com/59663734/199523719-df9cb7d4-6e1a-4133-acf5-0bf867d5a3b2.png)
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/199530596-fd9e53d6-1ae9-4a46-b422-a6b460c1ec3a.png" width="350" height="180"/>
+</p>
 
+We now get:
 
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/199531233-73ec873c-96a5-4410-9cb6-847c59986979.png"/>
+</p>
 
+Note that the prior represents our prior belief about the weights that it should be small and centered around ```0```.
 
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/199531750-25cbe8c8-3790-479c-a16e-1c2fd8b26242.png"/>
+</p>
 
+- **Without** regularization, we maximize the **likelihood**.
+- **With** regularization, we maximize the **posterior** hence, **"Maximum a Posteriori" (MAP Estimation)**.
 
 
 ### 3.2 L1: Lasso Regularization
