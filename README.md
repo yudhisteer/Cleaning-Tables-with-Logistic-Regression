@@ -779,7 +779,7 @@ print("Final w with regularization:", w)
 Final w with regularization: [0.10845272 1.68182605 3.17498581]
 ```
 
-Notice that the weights **without regulaization** were around ```17``` or ```18``` but **with regularization** it is around ```1``` and ```3``` only.
+Notice that the weights **without regulaization** were around ```17``` or ```18``` but **with regularization** they are around ```1``` and ```3``` only.
 
 
 ### 3.2 L1: Lasso Regularization
