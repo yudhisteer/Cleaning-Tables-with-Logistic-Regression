@@ -671,6 +671,21 @@ Hence, we need **regularization** which will **penalize** those **large weights*
 
 where <img src="https://latex.codecogs.com/png.image?\dpi{110}\lambda&space;" title="https://latex.codecogs.com/png.image?\dpi{110}\lambda " /> is the **smoothing parameter**.
 
+Our new cost function with regularization becomes:
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/199523235-cee2080e-3019-4a8d-a435-ca875ad2835d.png"/>
+</p>
+
+- As λ increases, weights ≈ 0
+- As λ ≈ 0, we are just minimizing the inital cross-entropy.
+
+The **Gradient Descent** then becomes:
+
+
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/199524875-9696086e-b9fd-49d5-9c63-dbde25939710.png"/>
+</p>
 
 
 
@@ -679,6 +694,8 @@ where <img src="https://latex.codecogs.com/png.image?\dpi{110}\lambda&space;" ti
 
 
 
+
+![CodeCogsEqn (82)](https://user-images.githubusercontent.com/59663734/199523719-df9cb7d4-6e1a-4133-acf5-0bf867d5a3b2.png)
 
 
 
