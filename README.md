@@ -654,7 +654,7 @@ Suppose we have two sets of gaussian distributed data with equal covariances. We
 </p>
 
 
-But why is the Bayesian solution ```[0 4 4]``` and not ```[0 1 1]``` or ```[0 10 10]```? To answer this question, let's calculated the predicted values for various weights and one test point ```[0 1 1]``` and their cross-entropy loss:
+But why is the Bayesian solution ```[0 4 4]``` and not ```[0 1 1]``` or ```[0 10 10]```? Note that all these different set of weights would have given the same equation for the decision boundary. To answer this question, let's calculated the predicted values for various weights and one test point ```[0 1 1]``` and their cross-entropy loss:
 
 
 <p align="center">
