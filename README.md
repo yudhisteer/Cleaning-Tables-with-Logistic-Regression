@@ -727,7 +727,8 @@ Note that the prior represents our prior belief about the weights that it should
 - **Without** regularization, we maximize the **likelihood**.
 - **With** regularization, we maximize the **posterior** hence, **"Maximum a Posteriori" (MAP Estimation)**.
 
-Let's check it in code.
+
+
 **Without** Regularizaion:
 
 ```python
