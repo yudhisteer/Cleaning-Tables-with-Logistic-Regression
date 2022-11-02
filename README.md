@@ -727,6 +727,60 @@ Note that the prior represents our prior belief about the weights that it should
 - **Without** regularization, we maximize the **likelihood**.
 - **With** regularization, we maximize the **posterior** hence, **"Maximum a Posteriori" (MAP Estimation)**.
 
+Let's check it in code.
+**Without** Regularizaion:
+
+```python
+# let's do gradient descent 100 times
+w = np.array([0.21004786, -1.37631033, -1.16113371]) #initial random weights
+print("Initial w = ", w)
+learning_rate = 0.1
+for i in range(100):
+    if i % 10 == 0:
+        print(cross_entropy(T, Y))
+    
+    # gradient descent weight udpate WITHOUT regularization
+    w += - learning_rate * Xb.T.dot(Y-T)
+
+    # recalculate Y
+    Y = sigmoid(Xb.dot(w))
+
+
+print("Final w without regularization:", w)
+```
+
+```python
+Final w without regularization: [ 0.15432867 17.42126826 18.17381684]
+```
+
+
+**With** Regularizaion:
+```python
+# let's do gradient descent 100 times
+w = np.array([ 0.21004786, -1.37631033, -1.16113371])  #initial random weights
+print("Initial w = ", w)
+learning_rate = 0.1
+lambd = 0.1
+for i in range(100):
+    if i % 10 == 0:
+        print(cross_entropy(T, Y))
+
+    # gradient descent weight udpate WITH regularization
+    w += learning_rate * (Xb.T.dot(T-Y) - lambd*w)
+
+    # recalculate Y
+    Y = sigmoid(Xb.dot(w))
+
+
+print("Final w with regularization:", w)
+```
+
+```python
+Final w with regularization: [0.10845272 1.68182605 3.17498581]
+```
+
+Notice that the weights **without regulaization** were around ```17``` or ```18``` but **with regularization** it is around ```1``` and ```3``` only.
+
 
 ### 3.2 L1: Lasso Regularization
 
