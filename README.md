@@ -688,7 +688,7 @@ The **Gradient Descent** then becomes:
 </p>
 
 
-Let's examine this through a probabilistic perspective:
+Let's examine this through a **probabilistic perspective**:
 
 Cross-entropy maximizes the likelihood since:
 
