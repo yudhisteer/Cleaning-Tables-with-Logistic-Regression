@@ -790,13 +790,19 @@ If we have a set of data of ```m``` features and we decide to add one more featu
 - If the new feature is **correlated** with the target, then the weight will be **non-zero** and SSE will **improve**.
 - If the new feature is **NOT correlated** with the target then the weight will be **zero**. SSE remains the **same**.
 
+What happens if our new feature is random noise? We observe that our R squared will **improve**, though slightly. Why is that? Because the correlation between the ```random noise``` and the ```target``` is **non-zero**.
 
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/200955765-ed897fc7-33f6-455e-96a0-0d0aca220f3a.png" width="450" height="200"/>
+</p>
 
+Thus, we do not want random noise features in our dataset. In general we want our ```number of featutures``` to be **less than** the ```number of samples (D << N)```. We want a dataset which has a **skinny** structure rather than a **fat** one as shown below:
 
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/200955958-e8239a40-e6b7-4d47-8072-d90fd8dcafeb.png" width="420" height="220"/>
+</p>
 
-
-
-
+Our goal is to select a small number of important features that can produce the desired trend and remoce all other features that are just ```noise```. In the end, the weights matrix will be a ```sparsity``` one where most weights will be non-zero and a few of the weights will be non-zero.
 
 
 
