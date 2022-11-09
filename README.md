@@ -785,6 +785,42 @@ Notice that the weights **without regulaization** were around ```17``` or ```18`
 
 ### 3.2 L1: Lasso Regularization
 
+If we have a set of data of ```m``` features and we decide to add one more feature in our dataset such that we not have ```m+1``` features to train our model, there are 2 possibilities for the output:
+
+- If the new feature is correlated with the target, then the weight will be non-zero and SSE will improve.
+- If the new feature is not correlated with the target then the weight will be zero. SSE remains the same.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
