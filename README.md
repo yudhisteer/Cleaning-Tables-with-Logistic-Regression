@@ -804,6 +804,9 @@ Thus, we do not want random noise features in our dataset. In general we want ou
 
 Our goal is to select a small number of important features that can produce the desired trend and remoce all other features that are just ```noise```. In the end, the weights matrix will be a ```sparsity``` one where most weights will be non-zero and a few of the weights will be non-zero.
 
+<p align="center">
+  <img src= "https://user-images.githubusercontent.com/59663734/200959536-cc502296-1993-4592-9e8d-a01b550d0156.png"/>
+</p>
 
 
 
